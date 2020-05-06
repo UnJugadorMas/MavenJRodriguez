@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ProyectoMavenJRodriguez1</groupId>
+  <artifactId>ProyectoMavenJRodriguez1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ProyectoMavenJRodriguez1</name>
+  <description>ProyectoMavenJRodriguez1</description>
+  
+  <dependencies>
+  <!-- Dependencies mysql connector -->
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.20</version>
+  </dependency>  
+  
+  	
+  <!-- Dependencies JUnit tests -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.7.0-M1</version>
+    <scope>test</scope>
+</dependency>
+  
+  <!-- Dependencies web -->
+  <dependency>
+  	<groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.4</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency>
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>jsp-api</artifactId>
+     <version>2.1</version>
+     <scope>provided</scope>
+  </dependency>
+  
+  </dependencies>
+  
+  <!-- Package y plugin war -->
+  <packaging>war</packaging>
+  
+  <build>
+  	<plugins>
+  	<!-- plugin war -->
+  		<plugin>
+  			<artifactId>maven-war-plugin</artifactId>
+  			<version>2.6</version>
+  			<configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+  		</plugin>
+  		
+<!-- Plugin javadoc --> 		
+  	<plugin>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-javadoc-plugin</artifactId>
+  		<version>3.0.1</version>
+  		<configuration>
+  			<javadocExecutable>C:\Program Files\Java\jdk-14.0.1\bin\javadoc</javadocExecutable>
+  			<source>8</source>
+  		</configuration>
+  	</plugin>
+  	</plugins>
+  </build>
+  
+</project>
